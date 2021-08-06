@@ -105,12 +105,12 @@ function posts_api(WP_REST_Request $request) {
     return $result;
 };
 
-add_filter('rest_url_prefix', 'rest_url_change_prefix');
+/*add_filter('rest_url_prefix', 'rest_url_change_prefix');
  
 function rest_url_change_prefix($slug) {
  
     return 'api';
-}
+}*/
 
 add_action('rest_api_init', function ($server) {
     $server->register_route('degordian-posts', '/v1/posts', [
